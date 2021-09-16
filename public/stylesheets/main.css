@@ -1,0 +1,69 @@
+* {
+    font-family: 'Crimson Text', serif;
+}
+header {
+    background-image: url('https://overland.org.au/wp-content/Refugee-rally-600x250.jpg');
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white
+}
+
+
+.read-images {
+    width: 60%;
+}
+
+.main-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    background-color: gainsboro;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-bar-one {
+    list-style: none;
+    color: white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    text-decoration: none;
+}
+
+.nav-bar {
+    list-style: none;
+    color: white;
+    border-right: 1px solid white;
+    text-decoration: none;
+}
+
+.grid-2-wrapper {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.centre-wrapper {
+    padding: 0px 10px;
+}
+
+aside {
+    height: fit-content;
+    padding: 40px;
+}

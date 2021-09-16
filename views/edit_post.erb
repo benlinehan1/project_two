@@ -1,0 +1,11 @@
+<form action="/posts/<%=post["id"]%>" method="post">
+<input type="hidden" name="_method" value="put">
+<label for="">Title:</label>
+<input type="text" name="title" value="<%= post["title"]%>">
+<label for="">Content:</label>
+<input type="text" name="content" value="<%= post["content"]%>">
+<label for="">Image</label>
+<input type="text" name="image_url" value="<%= post["image_url"]%>">
+
+<button>Finalise edit</button>
+</form>

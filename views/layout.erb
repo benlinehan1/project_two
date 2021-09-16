@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Hearts, Open Borders.</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <h1>Open Hearts, Open Borders.</h1>
+  </header>
+  <nav>
+    <a class="nav-bar-one" href="/">Home</a>
+    <a class="nav-bar-one" href="/about">About us</a>
+    <a class="nav-bar"   href="/resources">Resources</a>
+    <a class="nav-bar"  href="/account">Make an Account</a>
+    <a class="nav-bar"  href="/login">Login
+    </a>
+  
+  </nav>
+  <% if logged_in?()%>
+    <p> Logged in as <%= current_user()["username"]%>
+  <%end%>
+
+
+
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+  <%= yield %>
+
+<footer>
+<div id="google_translate_element"></div>
+</footer>
+</body>
+</html>
