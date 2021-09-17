@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 require 'bcrypt'
 require_relative 'user.rb'
 require_relative 'lib/helpers.rb'
@@ -153,6 +153,6 @@ end
 delete '/session' do
   
   session[:user_id] = nil
-  
+
   redirect '/login'
 end

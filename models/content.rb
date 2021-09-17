@@ -2,7 +2,7 @@ require 'pg'
 require_relative '../lib/helpers.rb'
 
 def run_sql(sql)
-    db = PG.connect(dbname: 'project_two')
+    db = PG.connect(ENV['DATABASE_URL'] || {dbname: 'project_two'})
     results = db.exec(sql)
     db.close
     return results
