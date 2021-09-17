@@ -16,3 +16,4 @@ def current_user()
         return {}
     end
 end
+

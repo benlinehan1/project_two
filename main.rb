@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader' if development?
+require 'sinatra/reloader'
 require 'bcrypt'
 require_relative 'user.rb'
 require_relative 'lib/helpers.rb'
@@ -53,7 +53,7 @@ end
 get '/comments' do
 
   
-  erb: comments
+  erb :comments
 end
 
 post '/account_creation' do
@@ -114,9 +114,45 @@ put '/posts/:id' do
 
 
 end
+
+get '/comment/:id' do
+  
+  comments = get_comments( params["id"] )
+
+  post = find_post_by_id( params["id"] ) 
+
+  erb :comment_section, locals: { comments: comments, post: post }
+
+end
+
+post '/comments/:id' do
+
+  comment = params["comment"]
+  username = current_user()["username"]
+  post_id = params["id"]
+
+  make_a_comment(comment, username, post_id)
+
+  redirect "/comment/#{post_id}"
+
+end
+
+delete '/comments/:id' do
+  
+  delete_a_comment( params["id"] )
+
+  redirect '/'
+end
  
 # Ally123
 # benjaminlinehan21@gmail.com
 # nickiminaj
 
 # PG.connect(ENV['DATABASE_URL'] || {dbname: 'project_two'})
+
+delete '/session' do
+  
+  session[:user_id] = nil
+  
+  redirect '/login'
+end

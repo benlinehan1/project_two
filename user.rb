@@ -1,5 +1,6 @@
 require 'pg'
-require 'pry'
+require 'pry' 
+
 
 def create_user(username, email,password_digest)
 

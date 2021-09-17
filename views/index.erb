@@ -3,20 +3,20 @@
 
 <%end%>
 
-<h2>Recent Posts:</h1>
+<h2>Recent Posts:</h2>
 <div class="main-wrapper">
 <% posts.each do |post| %>
 
 <article>
-<h2>
-<a href="/posts/<%=post["id"]%>">
-<%=post["title"]%>
-</a>
-</h2>
+    <h2>
+        <a href="/posts/<%=post["id"]%>">
+        <%=post["title"]%>
+        </a>
+    </h2>
 
-<img class="read-images" src="<%= post["image_url"]%>">
+    <img class="read-images" src="<%= post["image_url"]%>">
 
-<p>Posted by: <%= post["username"]%> </p>
+    <p>Posted by: <%= post["username"]%> </p>
 </article>
 <%end%>
 </div>

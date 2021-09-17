@@ -17,5 +17,5 @@ CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
     comment TEXT,
     username TEXT,
-    post_id TEXT
-)
+    post_id INTEGER
+);

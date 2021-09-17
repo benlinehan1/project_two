@@ -7,7 +7,7 @@
 
     <p>Posted by: <%= post["username"]%></p>
     
-    <a href="/comment">Comments</a>
+    <a href="/comment/<%= post["id"]%>">Comments</a>
     <% if current_user()["username"] == post["username"] %>
 
         <p>

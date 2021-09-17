@@ -1,0 +1,26 @@
+<% comments.each do |comment|%>
+    <article>
+
+    <p><%= comment["comment"]%><p>
+
+    <p>Posted by: <%= comment["username"]%></p>
+        <% if comment["username"] == current_user()["username"]%>
+        <form action="/comments/<%= comment["id"]%>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button>Delete</button>
+        </form>
+        <%end%>
+    </article>
+<%end%>
+
+<% if logged_in?() %>
+<h4>Make a comment!</h4>
+<form action="/comments/<%= post["id"]%>" method="post">
+
+    <label for="">Comment:</label>
+    <input type="text" name="comment">
+
+    <button>Post</button>
+</form>
+
+<%end %>

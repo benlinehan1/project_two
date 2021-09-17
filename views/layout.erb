@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-  <h1>Open Hearts, Open Borders.</h1>
+    <h1>Open Hearts, Open Borders.</h1>
   </header>
   <nav>
     <a class="nav-bar-one" href="/">Home</a>
@@ -24,6 +24,11 @@
   </nav>
   <% if logged_in?()%>
     <p> Logged in as <%= current_user()["username"]%>
+
+    <form action="/session" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Logout</button>
+    </form>
   <%end%>
 
 
