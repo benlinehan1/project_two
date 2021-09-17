@@ -19,3 +19,7 @@ Now I will add my translating function, since this is an app for internation res
 Next I will do finishing touches such as adding an about us page and resources page.
 
 Unsolved problems would be utilising timestamps. Preferably I would have liked to have had timestamps but did not get the chance to add them. As well as generally making the app much more presentable with CSS.
+
+A link to my finished website can be found here: https://limitless-earth-08971.herokuapp.com/
+
+My wireframe: https://whimsical.com/SEvV448nL3a9yRftxUdiCm
